@@ -7,6 +7,7 @@ import { lusitana, playwrite } from './ui/fonts';
 import { Lusitana } from 'next/font/google';
 import Image from 'next/image';
 
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
@@ -19,7 +20,7 @@ export default function Page() {
           className="relative w-0 h-0 border-l-[15px] border-r-[15px] border-b-[26px] border-l-transparent border-r-transparent border-b-black"
             />
           <p className={`${lusitana.className}text-xl text-yellow-500 md:text-3xl md:leading-normal`}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
+            <strong>Welcome to All-Ones.</strong> This is the example for the{' '}
             <a href="https://nextjs.org/learn/" className={`${playwrite.className} text-purple-400`}>
               Next.js Learn Course
             </a>

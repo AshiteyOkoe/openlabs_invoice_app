@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from 'react';
 // import styles from '@/app/ui/home.module.css';
-import styles from './ImageGallery.module.css'
+import styles from './ImageGallery.module.css';
+import clsx from 'clsx';
 
 const ImageGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -34,10 +35,10 @@ const ImageGallery = () => {
   };
 
   return (
-    <div className={styles.ImageGallery}>
-      <div className={styles.imageContainer}>
+    <div className={clsx(styles.ImageGallery)}>
+      <div className={clsx(styles.imageContainer)}>
         <img src={images[currentImage]} alt="Current Image" />
-        <div className={styles.buttonContainer}>
+        <div className={clsx(styles.buttonContainer)}>
           <button className={styles.backwardButton} onClick={handleBackwardClick}>
             &#60;
           </button>
@@ -46,11 +47,11 @@ const ImageGallery = () => {
           </button>
         </div>
       </div>
-      <div className={styles.iconContainer}>
+      <div className={clsx (styles.iconContainer)}>
         {images.map((image, index) => (
           <div
             key={index}
-            className={`icon ${currentImage === index ? 'active' : ''}`}
+            className={clsx(`icon ${currentImage === index ? 'active' : ''}`)}
             onClick={() => handleIconClick(index)}
           >
             &#9679;
